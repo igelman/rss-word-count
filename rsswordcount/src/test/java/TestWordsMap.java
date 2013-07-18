@@ -1,5 +1,3 @@
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -7,15 +5,15 @@ import org.junit.Test;
 
 /*
  *  json object maps to:
- *  HashMap wordsMap
+ *  HashMap output
  *  |_
- *  | Array words
- *  |            |_
- *  |              Object wordCounter
- *  |                               |_
- *  |                               | property String word
- *  |                               |_
- *  |_								  property Integer count
+ *  | HashMap wordsMap
+ *  |                |_
+ *  |                  Object wordCounter
+ *  |                                   |_
+ *  |                                   | property String word
+ *  |                                   |_
+ *  |_								      property Integer count
  *    Integer stopWordsIgnored
  */
 public class TestWordsMap {
@@ -135,6 +133,8 @@ public class TestWordsMap {
 		System.out.println(missingIncrementCountMessage);
 		Assert.assertEquals(missingIncrementCountMessage, expectedMissingIncrementCount, actualMissingIncrementCount);
 	}
+	
+	
 
 }
 

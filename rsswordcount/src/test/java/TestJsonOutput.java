@@ -6,15 +6,15 @@ import org.junit.Test;
 
 /*
  *  json object maps to:
- *  HashMap wordsMap
+ *  HashMap output
  *  |_
- *  | Array words
- *  |            |_
- *  |              Object wordCounter
- *  |                               |_
- *  |                               | property String word
- *  |                               |_
- *  |_								  property Integer count
+ *  | HashMap wordsMap
+ *  |                |_
+ *  |                  Object wordCounter
+ *  |                                    |_
+ *  |                                    | property String word
+ *  |                                    |_
+ *  |_                                     property Integer count
  *    Integer stopWordsIgnored
  */
 public class TestJsonOutput {
