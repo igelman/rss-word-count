@@ -1,5 +1,22 @@
 import java.util.HashMap;
 
+/*
+ * WordsMap represents lists of words and counts in json output:
+ * [
+ *      "foo": {
+ *          "word": "foo",
+ *          "count": 1000
+ *      },
+ *      "bar": {
+ *          "word": "bar",
+ *          "count": 500
+ *      }
+ *  ]
+ *  
+ *  Because the requirement excludes the key values ("foo" and "bar"),
+ *   the output will use only the hashmap values.
+ *  The values in the hashmap are objects of class WordCounter. 
+ */
 
 public class WordsMap {
 	HashMap<String, WordCounter> wm = new HashMap<String, WordCounter>();

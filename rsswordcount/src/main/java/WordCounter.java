@@ -1,4 +1,10 @@
-
+/*
+ * 	WordCounter class represents innermost part of json output:
+ *      {
+ *          "word": "foo",
+ *          "count": 1000
+ *      }
+ */
 public class WordCounter {
 	String word;
 	int count;
