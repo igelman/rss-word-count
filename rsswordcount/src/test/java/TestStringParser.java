@@ -45,6 +45,8 @@ public class TestStringParser {
 		String countNotMessage = "\ntestCountAllUniques\nexpectedNotCount: " + expectedNotCount + " | actualNotCount: " + actualNotCount;
 		System.out.println(countNotMessage);
 		Assert.assertEquals(countNotMessage, expectedNotCount, actualNotCount);
+		
+		System.out.println("Size of wm: " + wm.size());
 	}
 
 }

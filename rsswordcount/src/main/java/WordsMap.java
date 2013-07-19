@@ -18,7 +18,7 @@ import java.util.HashMap;
  *  The values in the hashmap are objects of class WordCounter. 
  */
 
-public class WordsMap {
+public class WordsMap extends HashMap<String, WordCounter> {
 	HashMap<String, WordCounter> wm = new HashMap<String, WordCounter>();
 	
 	public void addWordCounter(WordCounter wc) {
@@ -46,5 +46,21 @@ public class WordsMap {
 			newCount = wc.increment();
 		}
 		return newCount;
+	}
+	
+	public boolean containsWord(String wordKey){
+		boolean contains = false;
+		if (wm.containsKey(wordKey)) {
+			contains = true;
+		}
+		return contains;
+	}
+	
+	public void removeWc(String wordKey) {
+		System.out.println("called removeWc");
+		if (this.containsWord(wordKey)) {
+			System.out.println("removeWc() in the if this.containsKey for wordKey " + wordKey);
+			this.remove(wordKey);
+		}
 	}
 }

@@ -134,6 +134,29 @@ public class TestWordsMapAndCounter {
 		Assert.assertEquals(missingIncrementCountMessage, expectedMissingIncrementCount, actualMissingIncrementCount);
 	}
 	
+	@Test
+	public void TestWordsMapRemove() {
+		WordCounter wcFoo = new WordCounter();
+		wcFoo.setWord(wordFoo);
+		wcFoo.setCount(countFoo);
+		
+		WordCounter wcBar = new WordCounter();
+		wcBar.setWord(wordBar);
+		wcBar.setCount(countFoo);
+		
+		WordsMap wm = new WordsMap();
+		wm.addWordCounter(wcFoo);
+		wm.addWordCounter(wcBar);
+		
+		int beforeFooCount = wm.getCount(wordFoo);
+		wm.removeWc(wordFoo);
+		int afterFooCount = wm.getCount(wordFoo);
+		int barCount = wm.getCount(wordBar);
+		
+		System.out.println("beforeFooCount: " + beforeFooCount);
+		System.out.println("afterFooCount: " + afterFooCount);
+	}
+	
 	
 
 }
