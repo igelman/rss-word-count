@@ -16,7 +16,7 @@ import org.junit.Test;
  *  |_								      property Integer count
  *    Integer stopWordsIgnored
  */
-public class TestWordsMap {
+public class TestWordsMapAndCounter {
 
 		String wordFoo;
 		int countFoo;

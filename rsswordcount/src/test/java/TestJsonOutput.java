@@ -18,9 +18,12 @@ import org.junit.Test;
  *    Integer stopWordsIgnored
  */
 public class TestJsonOutput {
+	private String paragraph;
 
 	@Before
 	public void setUp() throws Exception {
+		paragraph = "word1 word2 word2 word3 word3 word3 word4 word4 word4 word4 a an and";
+		int stopWordsIgnored = 10000;
 	}
 
 	@After
@@ -29,7 +32,15 @@ public class TestJsonOutput {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		WordsMap wm = new WordsMap();
+		StringParser sp = new StringParser(wm);
+		
+		sp.setString(paragraph);
+		sp.countWords();
+		
+		JsonOutput gson = new JsonOutput(wm);
+		String json = gson.getJson();
+		System.out.println(json);
 	}
 
 }
